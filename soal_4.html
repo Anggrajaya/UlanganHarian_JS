@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keliling Jajar Genjang</title>
+</head>
+<body style="background-color: rgb(42, 99, 165); color: wheat;">
+    <center>
+        <div style="margin-top: 35vh;" class="keliling_jajar_genjang">
+            <h1>Keliling Jajar Genjar</h1>
+            <label for="sisi_a">Masukkan Panjang Sisi a :</label>
+            <input type="number" id="sisi_a"><br>
+            <div style="margin-top: 10px;">
+                <label for="sisi_b">Masukkan Panjang Sisi b :</label>
+                <input type="number" id="sisi_b"><br>
+            </div>
+            <button style="margin-top: 10px; background-color: brown; border-radius: 5px; color: wheat;  padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px; border: 1px black solid;" onclick="HitungKeliling()">Hitung Keliling</button>
+            <p id="hasil"></p>
+            <a href="index.html"><button style="background-color: brown; border-radius: 5px; color: wheat;  padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px; border: 1px black solid;">Kembali</button></a>
+        </div>
+    </center>
+    <script>
+        function HitungKeliling() {
+            const sisi_a = parseFloat(document.getElementById('sisi_a').value);
+            const sisi_b = parseFloat(document.getElementById('sisi_b').value);
+            const hasil = document.getElementById('hasil');
+
+            const keliling = 2 * (sisi_a + sisi_b);
+
+            hasil.textContent = "Keliling Jajar Genjang = " + keliling;
+        }
+    </script>
+</body>
+</html>

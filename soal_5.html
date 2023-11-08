@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suara Hewan</title>
+</head>
+<body style="background-color: rgb(42, 99, 165); color: wheat;">
+    <center>
+        <div style="margin-top: 35vh;">
+            <h1>Suara Hewan</h1>
+            <label for="suara"></label>
+            <input type="text" id="suara">
+            <button onclick="cek_hewan()" style="background-color: brown; border-radius: 5px; color: wheat;  padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px; border: 1px black solid;">CEK</button>
+            <p id="hasil"></p>
+            <a href="index.html"><button style="background-color: brown; border-radius: 5px; color: wheat;  padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px; border: 1px black solid;">Kembali</button></a>
+        </div>
+    </center>
+    <script>
+        function cek_hewan(){
+            const suara = document.getElementById('suara').value;
+            const hasil = document.getElementById('hasil')
+
+            if(suara === "meong"){
+                hasil.textContent="Kucing";
+            }
+            else if(suara === "guguk"){
+                hasil.textContent="Anjing";
+            }
+            else{
+                hasil.textContent="Hewan Tidak diketahui"
+            }
+        }
+    </script>
+</body>
+</html>

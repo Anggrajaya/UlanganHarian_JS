@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilai</title>
+</head>
+<body style="background-color: rgb(42, 99, 165);">
+    <div style="margin-top: 35vh; color: wheat;" class="input">
+        <center>
+            <h1>Penilaian</h1>
+            <label for="nilai">Masukan Nilai :</label>
+            <input type="number" id="nilai"><br>
+            <button style="margin-top: 30px; background-color: brown; border-radius: 5px; color: wheat;  padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px; border: 1px black solid;" onclick="ceknilai()">Cek Nilai</button>
+            <p id="hasil"></p>
+            <a href="index.html"><button style="background-color: brown; border-radius: 5px; color: wheat;  padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 5px; border: 1px black solid;">Kembali</button></a>
+        </center>
+    </div>
+    <script>
+        function ceknilai(){
+            const inputNilai= parseInt(document.getElementById('nilai').value);
+            const hasil = document.getElementById('hasil');
+
+            if(inputNilai > 80){
+                hasil.textContent="SANGAT MEMUASKAN"
+            }
+            if(inputNilai >= 60 && inputNilai <= 80){
+                hasil.textContent="MEMUASKAN"
+            }
+            if(inputNilai <= 60){
+                hasil.textContent="JANGAN MENYERAH !!!"
+            }
+        }
+    </script>
+</body>
+</html>
